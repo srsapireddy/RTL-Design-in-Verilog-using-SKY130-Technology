@@ -116,13 +116,23 @@ Here, the tt_025C_1v80 denotes the library design's PVT (Process, Voltage & Temp
 
 Upon opening the .lib file for reference, using</br>
 
-`gvim ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib`</br>
+`vim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`</br>
 
 We get to see detailed parameter values of all the different flavors of standard cells (logic gates etc.). The parameters include the leakage power of each input value of the cell, the area of the cell, cell footprint, cell leakage power, driver waveform, etc. These parameters vary for each flavor of the same cell with the same functionality.</br>
 
 For Example, A 2 input or gate has different flavors like or2_0, or2_1, or2_2, and so on. Each cell has different values of leakage power, area, etc. This is shown below:</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/679b930a-2084-4560-a2ce-aef81f95469a)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/f2b4d3c5-e1b4-421c-a809-4201621aed60)
+
+
+#### 2-input OR Gate: sky130_fd_s_hd.v file
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/ffe89187-73b3-4485-a852-ed6c9d469fcd)
+
 Based on the above images, it can be inferred that even though the behavioral logic of the 2-input-OR gates or2_0 and or2_4 are the same, they differ in their internal parameters like leakage power and area. The higher area of or2_4 infers that it employs wider transistors, thereby confirming that it is a `fast cell.`</br>
+
+
 
 
 
