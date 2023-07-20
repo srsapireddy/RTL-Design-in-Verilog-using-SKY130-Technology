@@ -12,7 +12,7 @@ Users interested in practicing design using open-source tools need a Linux-based
 Basic knowledge of Verilog HDL is required to follow the content without any difficulties. </br>
 
 ## Introduction to Verilog RTL Design and Synthesis</br>
-On the first day, we cover the basics of RTL Design, Testbench, Simulation, and Synthesis. Open-Source software like Verilog (simulator) and YOSYS (Synthesis) are provided through remote access in the portal to practice labs.</br>
+On the first day, we cover the basics of RTL Design, Testbench, Simulation, and Synthesis. Open-Source software like Verilog (simulator) and YOSYS (Synthesis) .</br>
 
 RTL Design - It consists of an actual verilog code / a set of Verilog codes that have the functionality to meet the required design specifications of the circuit. TestBench - Testbench is a setup that applies a set of stimuli (test-case vector) to check the functional working of the design file.</br>
 
