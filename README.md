@@ -132,6 +132,8 @@ For Example, A 2 input or gate has different flavors like or2_0, or2_1, or2_2, a
 
 Based on the above images, it can be inferred that even though the behavioral logic of the 2-input-OR gates or2_0 and or2_4 are the same, they differ in their internal parameters like leakage power and area. The higher area of or2_4 infers that it employs wider transistors, thereby confirming that it is a `fast cell.`</br>
 
+#### GVIM Installation: `sudo apt install vim-gtk3`
+
 
 
 
