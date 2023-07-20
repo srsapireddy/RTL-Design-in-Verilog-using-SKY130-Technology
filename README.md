@@ -37,7 +37,8 @@ After cloning the respective repositories in our lab instance, we perform a simu
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/f2ff4bb6-7210-44a5-ae31-05e28f829dfd)
 
 #### Waveform using gtkwave
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/4e9f03c8-352e-45be-9ef5-7e54ae7b5dc9)</br>
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/4e9f03c8-352e-45be-9ef5-7e54ae7b5dc9)
+
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/234d41ea-4918-4dcd-b263-b7b66d26ed66)</br>
 
 
