@@ -65,7 +65,7 @@ A cell delay in the digital logic circuit depends on the circuit's load, Capacit
 
 Faster the charging/discharging of the capacitance --> Lesser the Cell Delay.</br>
 
-To charge/discharge the capacitance faster, we use wider transistors that can source more current. This will help us reduce the cell delay, but wider transistors consume more power and area simultaneously. Similarly, narrower transistors help reduce area and power, but the circuit will have a higher cell delay. Hence, we must compromise on area and power if we design a circuit with low cell delay.</br>
+To charge/discharge the capacitance faster, we use wider transistors that can source more current. This will help us reduce the cell delay, but wider transistors simultaneously consume more power and area. Similarly, narrower transistors help reduce area and power, but the circuit will have a higher cell delay. Hence, we must compromise on area and power to design a circuit with low cell delay.</br>
 
 #### Constraints</br>
 A Constraint is a guidance file given to a synthesizer to enable an optimum implementation of the logic circuit by selecting the appropriate flavor of cells (fast or slow).</br>
@@ -74,17 +74,17 @@ A Constraint is a guidance file given to a synthesizer to enable an optimum impl
 We synthesize the 2:1 Multiplexer RTL design using YOSYS with appropriate library files from SKY130 technology that we cloned into the directory.</br>
 
 #### Coding scripts for Synthesis using YOSYS</br>
-`$yosys                                                                             --> invokes YOSYS 
+`$yosys                                                                             --> invokes YOSYS` 
 
-yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                  --> reads the corresponding library file
+`yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                  --> reads the corresponding library file`
 
-yosys> read_verilog good_mux.v                                                     --> reads the Verilog script
+`yosys> read_verilog good_mux.v                                                     --> reads the Verilog script`
 
-yosys> synth -top good_mux                                                         --> reads the top level module
+`yosys> synth -top good_mux                                                         --> reads the top level module`
 
-yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                       --> converts the logic file to netlist
+`yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                       --> converts the logic file to netlist`
 
-yosys> show                                                                        --> Final netlist output display`</br>
+`yosys> show                                                                        --> Final netlist output display`</br>
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/acc38137-8bf1-4f83-a304-a89e3eaf7a0e)
 
