@@ -94,7 +94,35 @@ yosys> show                                                                     
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/a38d9d38-e2c5-4e59-85d3-06ddf4705788)
 
-The final synthesized netlist shows that the 2:1 multiplexer RTL is translated to a gate-level representation using buffers and an MUX gate</br>
+The final synthesized netlist shows that the 2:1 multiplexer RTL is translated to a gate-level representation using buffers and a MUX gate</br>
+
+### Timing libs, Hierarchical vs. Flat Synthesis & Efficient FlipFlop coding styles</br>
+#### Part 1 - More about the .lib file</br>
+We have seen that a .lib file is a collection of different flavors of standard cells with nets. In this workshop, we use the sky130_fd_sc_hd_tt_025C_1v80.lib. Looking in-depth into the naming of this lib file, it denotes the following:</br>
+
+fd --> Foundry</br>
+
+sd --> Standard Cell</br>
+
+hd --> High Density</br>
+
+tt --> Typical Process</br>
+
+025C --> Temperature</br>
+
+1v80 --> Voltage</br>
+
+Here, the tt_025C_1v80 denotes the library design's PVT (Process, Voltage & Temperature corners).</br>
+
+Upon opening the .lib file for reference, using</br>
+
+gvim ../lib/sky130_fd_sc_hd_tt_025C_1v80.lib</br>
+
+We get to see detailed parameter values of all the different flavors of standard cells (logic gates etc.). The parameters include the leakage power of each input value of the cell, the area of the cell, cell footprint, cell leakage power, driver waveform, etc. These parameters vary for each flavor of the same cell with the same functionality.</br>
+
+For Example, A 2 input or gate has different flavors like or2_0, or2_1, or2_2, and so on. Each cell has different values of leakage power, area, etc. This is shown below:</br>
+
+Based on the above images, it can be inferred that even though the behavioral logic of the 2-input-OR gates or2_0 and or2_4 are the same, they differ in their internal parameters like leakage power and area. The higher area of or2_4 infers that it employs wider transistors, thereby confirming that it is a fast cell.</br>
 
 
 
