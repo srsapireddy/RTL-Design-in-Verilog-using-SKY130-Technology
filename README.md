@@ -94,7 +94,7 @@ We synthesize the 2:1 Multiplexer RTL design using YOSYS with appropriate librar
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/a38d9d38-e2c5-4e59-85d3-06ddf4705788)
 
-The final synthesized netlist shows that the 2:1 multiplexer RTL is translated to a gate-level representation using buffers, 2 input NAND gate, and OR gate, and an o21ai_0 (OR, AND & NOT gate)</br>
+The final synthesized netlist shows that the 2:1 multiplexer RTL is translated to a gate-level representation using buffers, and an o21ai_0 (OR, AND & NOT gate)</br>
 
 
 
