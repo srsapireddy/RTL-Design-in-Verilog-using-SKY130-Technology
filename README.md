@@ -41,9 +41,60 @@ After cloning the respective repositories in our lab instance, we perform a simu
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/234d41ea-4918-4dcd-b263-b7b66d26ed66)</br>
 
+### Part 3 - Synthesis using YOSYS open-source tool</br>
+After the simulation of the rtl design with the respective testbench, we perform a synthesis of the design using Synthesizer. A Synthesizer is a tool to convert the RTL Design into a netlist file (Standard Cell Format). Specifically, a netlist is a standard gate-level file comprising nets, sequential and combinational cells, and their connectivity of the corresponding RTL file coded using an HDL. In simple words, an rtl file is a code that describes the functionality of the design, and a netlist is a file that expresses the same code in the form of logic cells like logic gates, flipflops, multiplexers with net connections, etc.</br>
 
+Here, we use a synthesizer tool called YOSYS, a part of the Qflow (open-source) toolchain for complete RTL2GDS transformation. The primary input files to YOSYS include the RTL Design and .lib (library) files.</br>
 
+#### What is a .lib file?</br>
 
+--> .lib files are a collection of logical modules which include logic gates like AND, OR, NOT, NAND, NOR, etc. Each logic gate is stored in one or more flavors depending on the number of inputs and speed of the circuit (slow, fast & medium).</br>
+
+#### Why do we need different flavors of the same logic gate?</br>
+
+--> Combinational delays present in a logic path determine a logic circuit's maximum speed and performance. For Example, to get maximum performance from a circuit, we need to design the circuit with minimum clock delays.</br>
+
+We require very fast cells to minimize the clock delays to obtain minimum clock delays.</br>
+
+In the same way, to avoid Hold violations in a logic path, we have to use SLOW cells to synchronize the hold time for the logic path.</br>
+
+All these different types of fast and slow cells are present in a .lib file to be used by the synthesis software tool.</br>
+
+#### Faster Cells vs. Slower Cells</br>
+A cell delay in the digital logic circuit depends on the circuit's load, Capacitance.</br>
+
+Faster the charging/discharging of the capacitance --> Lesser the Cell Delay.</br>
+
+To charge/discharge the capacitance faster, we use wider transistors that can source more current. This will help us reduce the cell delay, but wider transistors consume more power and area simultaneously. Similarly, narrower transistors help reduce area and power, but the circuit will have a higher cell delay. Hence, we must compromise on area and power if we design a circuit with low cell delay.</br>
+
+#### Constraints</br>
+A Constraint is a guidance file given to a synthesizer to enable an optimum implementation of the logic circuit by selecting the appropriate flavor of cells (fast or slow).</br>
+
+#### Practical Synthesis using YOSYS</br>
+We synthesize the 2:1 Multiplexer RTL design using YOSYS with appropriate library files from SKY130 technology that we cloned into the directory.</br>
+
+#### Coding scripts for Synthesis using YOSYS</br>
+`$yosys                                                                             --> invokes YOSYS `</br>
+
+`yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                  --> reads the corresponding library file`</br>
+
+`yosys> read_verilog good_mux.v                                                     --> reads the Verilog script`</br>
+
+`yosys> synth -top good_mux                                                         --> reads the top level module`</br>
+
+`yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                       --> converts the logic file to netlist`</br>
+
+`yosys> show                                                                        --> Final netlist output display`</br>
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/acc38137-8bf1-4f83-a304-a89e3eaf7a0e)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/3cfccf87-e09a-4e07-b7a1-c3e775e83259)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/9e077014-30f1-4a09-b9db-16e208854c36)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/a38d9d38-e2c5-4e59-85d3-06ddf4705788)
+
+The final synthesized netlist shows that the 2:1 multiplexer RTL is translated to a gate-level representation using buffers, 2 input NAND gate, and OR gate, and an o21ai_0 (OR, AND & NOT gate)</br>
 
 
 
