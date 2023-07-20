@@ -74,17 +74,20 @@ A Constraint is a guidance file given to a synthesizer to enable an optimum impl
 We synthesize the 2:1 Multiplexer RTL design using YOSYS with appropriate library files from SKY130 technology that we cloned into the directory.</br>
 
 #### Coding scripts for Synthesis using YOSYS</br>
-`$yosys                                                                             --> invokes YOSYS` 
+```
+$yosys                                                                             --> invokes YOSYS 
 
-`yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                  --> reads the corresponding library file`
+yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                  --> reads the corresponding library file
 
-`yosys> read_verilog good_mux.v                                                     --> reads the Verilog script`
+yosys> read_verilog good_mux.v                                                     --> reads the Verilog script
 
-`yosys> synth -top good_mux                                                         --> reads the top level module`
+yosys> synth -top good_mux                                                         --> reads the top level module
 
-`yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                       --> converts the logic file to netlist`
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                       --> converts the logic file to netlist
 
-`yosys> show                                                                        --> Final netlist output display`</br>
+yosys> show                                                                        --> Final netlist output display
+```
+</br>
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/acc38137-8bf1-4f83-a304-a89e3eaf7a0e)
 
