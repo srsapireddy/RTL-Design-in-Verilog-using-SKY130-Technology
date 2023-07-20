@@ -2,7 +2,7 @@
 
 ### Project Scope </br>
 
-SKY130 is the hardware industry's first open-source process design kit (PDK) released by SkyWater Technology Foundry in collaboration with Google giving all hardware design experts and aficionados, a worldwide access to their IP functions and open-source ASICs. </br>
+SKY130 is the hardware industry's first open-source process design kit (PDK) released by SkyWater Technology Foundry in collaboration with Google giving all hardware design experts and aficionados: worldwide access to their IP functions and open-source ASICs. </br>
 
 Beginning with an introduction to digital design using Verilog HDL, the instructors cover digital design steps, including design, functional simulation, test bench-based validation of the design functionality, and logic Synthesis with optimization. Further, we learn about efficient verilog coding styles that result in predictable logic in Silicon.</br>
 
@@ -37,8 +37,8 @@ After cloning the respective repositories in our lab instance, we perform a simu
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/f2ff4bb6-7210-44a5-ae31-05e28f829dfd)
 
 #### Waveform using gtkwave
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/4e9f03c8-352e-45be-9ef5-7e54ae7b5dc9)
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/234d41ea-4918-4dcd-b263-b7b66d26ed66)
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/4e9f03c8-352e-45be-9ef5-7e54ae7b5dc9)</br>
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/234d41ea-4918-4dcd-b263-b7b66d26ed66)</br>
 
 
 
