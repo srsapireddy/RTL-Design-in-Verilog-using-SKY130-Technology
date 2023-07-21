@@ -16,7 +16,24 @@ On the first day, we cover the basics of RTL Design, Testbench, Simulation, and 
 
 RTL Design - It consists of an actual verilog code / a set of Verilog codes that have the functionality to meet the required design specifications of the circuit. TestBench - Testbench is a setup that applies a set of stimuli (test-case vector) to check the functional working of the design file.</br>
 
+In the digital circuit design, register-transfer level (RTL) is a design abstraction that models a synchronous digital circuit in terms of the data flow between hardware registers, and the logical operations performed on those signals. RTL abstraction is used in HDL to create high-level circuit representations, from which lower-level representations and ultimately, actual wiring can be derived.</br>
+
+Simulator: It is a tool that is used for checking the design. In this workshop, we are using iverilog tool. Simulation is creating models that mimic the behavior of the device you are designing (simulation models) and creating models to exercise the device (test benches). RTL Design: It consists of an actual verilog code / a set of Verilog codes that have the functionality to meet the required design specifications of the circuit.</br>
+
+Test Bench: It is the setup to apply a stimulus(test vectors) to design to check its functionality.
+
 We do the above processes using simulator software. The simulator is loaded with the design and its respective testbench file, after which it looks for changes in the input signals. Depending on the change, the output is evaluated. These changes in input and corresponding output values are dumped in a special format file called "value change dump" (.vcd) file. This file can be pictorially represented in waveforms using a waveform tool like gtkwave.</br>
+
+#### How Simulation Works
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/0915652a-c25e-401a-93bb-961dda164f39)
+
+The design may have 1 or more primary inputs and primary outputs, but TB doesn't have.)</br>
+
+#### Simulation Flow
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/119dc8b5-1f88-43b7-9360-2670d3d398dc)
+
+Simulator continuously checks for changes in the input. If there is an input change, the output is evaluated; else the simulator will never evaluate the output.</br>
 
 ### Part 1 - Setup the lab instance with libraries and Verilog files</br>
 Firstly, we have to clone 2 separate repositories, namely vsdflow, and sky130RTLDesignAndSynthesisWorkshop, which contain the required library files and Verilog design files to perform the simulations and logic synthesis parts of the workshop. It can be done using the basic Linux command git clone ex: `git clone https://github.com/kunalg123/vsdflow.git`. We are given a default set of files and libraries shown below to work on using the practical lab instance.</br>
