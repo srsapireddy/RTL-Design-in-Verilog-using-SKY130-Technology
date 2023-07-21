@@ -168,8 +168,8 @@ Now, we can write out the netlist of the hierarchical netlist file and look at t
 write_verilog -noattr multiple_modules_hier.v
 !gvim multiple_modules_hier.v
 ```
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/c8cadeda-cdd4-42bf-9b07-621e19e8e775)
 
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/8da07098-5f40-4326-9402-724887fe10ef)
 
 It can be seen that the OR gate is implemented using 2 `INV` and 1 `NAND` gate. This is because of a technical logic known as a Stacked PMOS issue. Implementing a logic gate using the Stacked PMOS concept results in poor mobility and is always avoided. That is why the OR gate was not implemented using 2 INV and 1 NOR gate logic, as PMOS transistors are stacked in NOR gate implementation using transistors.</br>
 
