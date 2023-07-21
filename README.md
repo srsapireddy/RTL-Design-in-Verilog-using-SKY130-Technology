@@ -151,7 +151,7 @@ yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 yosys> read_verilog multiple_modules.v                                                     
 
-yosys> synth -top mutiple_modules                                                         
+yosys> synth -top multiple_modules                                                         
 
 yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                    
 
