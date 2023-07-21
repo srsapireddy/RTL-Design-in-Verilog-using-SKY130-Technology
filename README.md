@@ -44,6 +44,11 @@ After cloning the respective repositories in our lab instance, we perform a simu
 ### Part 3 - Synthesis using YOSYS open-source tool</br>
 After the simulation of the rtl design with the respective testbench, we perform a synthesis of the design using Synthesizer. A Synthesizer is a tool to convert the RTL Design into a netlist file (Standard Cell Format). Specifically, a netlist is a standard gate-level file comprising nets, sequential and combinational cells, and their connectivity of the corresponding RTL file coded using an HDL. In simple words, an rtl file is a code that describes the functionality of the design, and a netlist is a file that expresses the same code in the form of logic cells like logic gates, flipflops, multiplexers with net connections, etc.</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/238f93a7-1b33-4637-98ba-39771c4f8c66)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/2796e27c-e499-4194-bc41-e15bc68e4179)
+
+Synthesizer is a tool for converting the RTL to Netlist, and here we are using the Yosys Synthesizer.</br>
 Here, we use a synthesizer tool called YOSYS, a part of the Qflow (open-source) toolchain for complete RTL2GDS transformation. The primary input files to YOSYS include the RTL Design and .lib (library) files.</br>
 
 #### What is a .lib file?</br>
