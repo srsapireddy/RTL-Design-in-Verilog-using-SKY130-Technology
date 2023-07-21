@@ -188,7 +188,8 @@ write_verilog -noattr multiple_modules_flat.v
 !gvim multiple_modules_flat.v
 ```
 
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/f9d0e01a-0d8c-460f-9938-996cbd261037)
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/1e19b18b-0a3e-4f85-b5b0-1a460ced5ec6)
+
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/b7735593-8f79-4544-8fbd-b7adca0c11d9)
 
