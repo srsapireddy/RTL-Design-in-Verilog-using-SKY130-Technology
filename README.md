@@ -229,7 +229,8 @@ Massive Complex Design:</br>
 
 A D flip-flop is a sequential element following the input pin d at the clock's edge. D flip-flop is a fundamental component in digital logic circuits. Two types of D Flip-Flops are being implemented: Rising-Edge D Flip Flop and Falling-Edge D Flip Flop.</br>
 
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/facb621c-d2ee-4685-9833-a7357367cba1)
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/24c05140-e7a0-415c-83c8-5373debe4a82)
+
 
 Every flop element needs an initial state; else, the combinational circuit will evaluate to a garbage value. To achieve this, there are control pins in the flop: Set and Reset, which can be Synchronous or Asynchronous.</br>
 
