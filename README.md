@@ -221,11 +221,17 @@ When a design consists of multiple instances of the same module, we can use sub-
 Massive Complex Design:</br>
 - When there is a very large complex design consisting of several modules, running a complete synthesis will cause a tool like `YOSYS` not to provide the expected results. In such a case, the massive design can be split into small fragments into sub-modules and synthesized separately to obtain simple netlist files and stitch back to get the netlist file of the complex design. </br>
 
+### Part 3 - Efficient Flip-flop coding styles and Optimizations</br>
 
+#### Flip-flop overview</br>
 
+`Flipflops` store a single bit (binary digit) of data in two states, '1' or '0'. One common application of these flip-flops is in large combinational circuits to avoid glitch errors due to propagation delays between logic gates which cause instability in output. The most common flip-flops are D-Flipflop, SR-Flipflop, JK Flipflop, and T-Flipflop. Various methods of implementing these flip-flops, like synchronous reset and synchronous set or asynchronous reset and set, etc. Listed below are different implementation/coding styles of D-flipflop with async-reset or sync-reset or async set etc.</br>
 
+A D flip-flop is a sequential element following the input pin d at the clock's edge. D flip-flop is a fundamental component in digital logic circuits. Two types of D Flip-Flops are being implemented: Rising-Edge D Flip Flop and Falling-Edge D Flip Flop.</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/facb621c-d2ee-4685-9833-a7357367cba1)
 
+Every flop element needs an initial state; else, the combinational circuit will evaluate to a garbage value. To achieve this, there are control pins in the flop: Set and Reset, which can be Synchronous or Asynchronous.</br>
 
 
 
