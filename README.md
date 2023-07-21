@@ -138,12 +138,12 @@ Based on the above images, it can be inferred that even though the behavioral lo
 #### GVIM Installation: `sudo apt install vim-gtk3`</br>
 
 ### Part 2 - Hierarchical vs Flat Synthesis</br>
-Let us consider an example code multiple_modules, which instantiates an AND & OR gate logic in separate sub-modules: sub_module1 & sub_module2. The Verilog code for the same is displayed below:</br>
+Let us consider an example code, `multiple_modules,` which instantiates an `AND` & `OR` gate logic in separate sub-modules: `sub_module1` & `sub_module2`. The Verilog code for the same is displayed below:</br>
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/e62bb5d9-8515-4e2f-aa0f-d8f2264ef063)
 
 #### Hierarchical Synthesis</br>
-When we synthesize this verilog code using YOSYS with the following code blocks:</br>
+When we synthesize this verilog code using `YOSYS` with the following code blocks:</br>
 
 ```
 $yosys
@@ -171,7 +171,7 @@ write_verilog -noattr multiple_modules_hier.v
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/8da07098-5f40-4326-9402-724887fe10ef)
 
-It can be seen that the OR gate is implemented using 2 INV and 1 NAND gate. This is because of a technical logic known as a Stacked PMOS issue. Implementing a logic gate using the Stacked PMOS concept results in poor mobility and is always avoided. That is why the OR gate was not implemented using 2 INV and 1 NOR gate logic, as PMOS transistors are stacked in NOR gate implementation using transistors.</br>
+It can be seen that the OR gate is implemented using 2 `INV` and 1 `NAND` gate. This is because of a technical logic known as a Stacked PMOS issue. Implementing a logic gate using the Stacked PMOS concept results in poor mobility and is always avoided. That is why the OR gate was not implemented using 2 INV and 1 NOR gate logic, as PMOS transistors are stacked in NOR gate implementation using transistors.</br>
 
 #### Flat Synthesis</br>
 We implement the Flat Synthesis technique using the flatten command to obtain a gate-based synthesized netlist file without preserving any of the sub_module hierarchy.</br>
@@ -180,7 +180,7 @@ We implement the Flat Synthesis technique using the flatten command to obtain a 
 yosys> flatten
 ```
 
-This command will implement the synthesis procedure without preserving the sub_module hierarchy, and we obtain a netlist file of the multiple_modules RTL design implemented using the AND & OR gates</br>
+This command will implement the synthesis procedure without preserving the sub_module hierarchy, and we obtain a netlist file of the multiple_modules RTL design implemented using the `AND` & `OR` gates</br>
 
 The flattened netlist and verilog module of the netlist file are obtained and listed as follows:</br>
 ```
@@ -193,11 +193,11 @@ write_verilog -noattr multiple_modules_flat.v
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/b7735593-8f79-4544-8fbd-b7adca0c11d9)
 
 #### When do we need sub_module level Synthesis?</br>
-Multiple Instances of the same module within the top-level design:</br>
-When a design consists of multiple instances of the same module, we can use sub-module level synthesis and replicate the same for all the other instances of the same module and stitch it together to obtain the complete netlist file. This can be done using one module instance in the synth-top command.</br>
+- Multiple Instances of the same module within the top-level design:</br>
+When a design consists of multiple instances of the same module, we can use sub-module level synthesis and replicate the same for all the other instances of the same module and stitch it together to obtain the complete netlist file. This can be done using one module instance in the `synth -top` command.</br>
 
 Massive Complex Design:</br>
-When there is a very large complex design consisting of several modules, running a complete synthesis will cause a tool like YOSYS not to provide the expected results. In such a case, the massive design can be split into small fragments into sub-modules and synthesized separately to obtain simple netlist files and stitch back to get the netlist file of the complex design. </br>
+When there is a very large complex design consisting of several modules, running a complete synthesis will cause a tool like `YOSYS` not to provide the expected results. In such a case, the massive design can be split into small fragments into sub-modules and synthesized separately to obtain simple netlist files and stitch back to get the netlist file of the complex design. </br>
 
 
 
