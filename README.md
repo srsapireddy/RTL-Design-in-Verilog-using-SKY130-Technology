@@ -190,8 +190,7 @@ write_verilog -noattr multiple_modules_flat.v
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/1e19b18b-0a3e-4f85-b5b0-1a460ced5ec6)
 
-
-![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/b7735593-8f79-4544-8fbd-b7adca0c11d9)
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/f1556a0f-130e-498a-b469-53e2c214ae36)
 
 #### When do we need sub_module level Synthesis?</br>
 - Multiple Instances of the same module within the top-level design:</br>
