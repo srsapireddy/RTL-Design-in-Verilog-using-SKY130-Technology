@@ -197,7 +197,7 @@ write_verilog -noattr multiple_modules_flat.v
 When a design consists of multiple instances of the same module, we can use sub-module level synthesis and replicate the same for all the other instances of the same module and stitch it together to obtain the complete netlist file. This can be done using one module instance in the `synth -top` command.</br>
 
 Massive Complex Design:</br>
-When there is a very large complex design consisting of several modules, running a complete synthesis will cause a tool like `YOSYS` not to provide the expected results. In such a case, the massive design can be split into small fragments into sub-modules and synthesized separately to obtain simple netlist files and stitch back to get the netlist file of the complex design. </br>
+- When there is a very large complex design consisting of several modules, running a complete synthesis will cause a tool like `YOSYS` not to provide the expected results. In such a case, the massive design can be split into small fragments into sub-modules and synthesized separately to obtain simple netlist files and stitch back to get the netlist file of the complex design. </br>
 
 
 
