@@ -234,6 +234,51 @@ A D flip-flop is a sequential element following the input pin d at the clock's e
 
 Every flop element needs an initial state; else, the combinational circuit will evaluate to a garbage value. To achieve this, there are control pins in the flop: Set and Reset, which can be Synchronous or Asynchronous.</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/21219efc-461f-45e1-9f5d-088590a3e41a)
+
+To simulate the RTL designs, we use the `iverilog` simulator to obtain simulated .vcd files that can be viewed using `gtkwave` analyzer.</br>
+
+#### Example Snippet:</br>
+```
+iverilog dff_asyncres.v tb_dff_asyncres.v
+./a.out
+gtkwave tb_dff_asyncres.vcd
+```
+
+#### Async Reset</br>
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/3cb01524-1fad-45f5-8b39-1213fe58786b)
+
+#### Sync Reset</br>
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/d31721dc-dd74-4f95-8cae-3c019c050c64)
+
+#### Async Sync Reset</br>
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/705a419f-efb0-4b7b-b300-386292dd0170)
+
+Further, the design files can be synthesized in YOSYS as we have done in the previous sessions. The one new command we use here is the `dfflibmap` command used when we deploy D-FlipFlops in the RTL design. The dfflibmap command links or maps the library files containing D-Flipflops' details for synthesis. The coding snippet for synthesizing a D-Flipflop in YOSYS is given below:</br>
+
+```
+$yosys
+
+yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib           
+
+yosys> read_verilog dff_asyncres.v                                                     
+
+yosys> synth -top dff_asyncres                                                         
+
+yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib                    
+
+yosys> show 
+```
+
+The Synthesized netlist of an Asynchronous Reset based D-Flipflop is displayed as follows.</br>
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/640f752a-b101-4d8c-8257-05d1c6496843)
+
+
+In the above netlist, it can be seen that the asynchronous reset D-Flipflop is implemented as a D-Flipflop with Active Low reset. This Active low reset is fed with an inverter to convert it into an Active High reset as an input to reset the flop port. Similarly, synthesis can be done for other D-Flipflop models in the verilog_models folder using the above snippet, and a netlist can be obtained for your study.</br>
+
 
 
 
