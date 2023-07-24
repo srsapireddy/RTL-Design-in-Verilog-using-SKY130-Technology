@@ -279,6 +279,44 @@ The Synthesized netlist of an Asynchronous Reset based D-Flipflop is displayed a
 
 In the above netlist, it can be seen that the asynchronous reset D-Flipflop is implemented as a D-Flipflop with Active Low reset. This Active low reset is fed with an inverter to convert it into an Active High reset as an input to reset the flop port. Similarly, synthesis can be done for other D-Flipflop models in the verilog_models folder using the above snippet, and a netlist can be obtained for your study.</br>
 
+### Day 3 - Combinational and Sequential Optimizations</br>
+#### Part 1 - Intro to Combinational Logic Optimizations</br>
+##### Why do we need Combinational Logic Optimizations?</br>
+
+- Primarily to squeeze the logic to get the most optimized design</br>
+- An optimized design results in comprehensive Area and Power saving</br>
+
+##### Types of Combinational Optimizations</br>
+- Constant Propagation
+  - Direct Optimization Technique
+- Boolean Logic Optimization
+  - K-Map based
+  - Quine Mckluskey Algorithms
+
+##### CONSTANT PROPAGATION</br>
+
+In Constant propagation techniques, unrelated inputs or affecting the changes in the output are ignored/optimized to simplify the combination logic, thereby saving area and power usage by those input pins.</br>
+
+##### BOOLEAN LOGIC OPTIMIZATION</br>
+
+Boolean logic optimization is simplifying a complex boolean expression into a simplified expression by utilizing the laws of boolean logic algebra.</br>
+
+```
+assign y = a?(b?c:(c?a:0)):(!c)
+```
+The above equation can be very much simplified into</br>
+```
+y = a'c' + a(bc + b'ca) 
+y = a'c' + abc + ab'c 
+y = a'c' + ac(b+b') 
+y = a'c' + ac
+y = a xor c
+```
+
+Thus, the complex ternary operator-based equation is simplified into a simple xor gate with two inputs, a and c</br>
+
+The following pictures depict the various versions of combination logic expressions simplified using Combinational logic optimization techniques.</br>
+
 
 
 
