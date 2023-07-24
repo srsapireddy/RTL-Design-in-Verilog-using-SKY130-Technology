@@ -317,6 +317,8 @@ Thus, the complex ternary operator-based equation is simplified into a simple xo
 
 The following pictures depict the various versions of combination logic expressions simplified using Combinational logic optimization techniques.</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/c22e0a20-1847-4fca-8b7a-7851d765f081)
+
 
 
 
