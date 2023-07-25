@@ -1,5 +1,8 @@
 # RTL-Design-in-Verilog-using-SKY130-Technology
 
+Author: Srinivas Rahul Sapireddy </br>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib) </br>
+
 ### Project Scope </br>
 
 SKY130 is the hardware industry's first open-source process design kit (PDK) released by SkyWater Technology Foundry in collaboration with Google giving all hardware design experts and aficionados: worldwide access to their IP functions and open-source ASICs. </br>
