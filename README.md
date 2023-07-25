@@ -3,6 +3,9 @@
 Author: Srinivas Rahul Sapireddy </br>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib) </br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/6faf8a37-3d5c-464d-84c3-337eace6e18f)
+
+
 ### Project Scope </br>
 
 SKY130 is the hardware industry's first open-source process design kit (PDK) released by SkyWater Technology Foundry in collaboration with Google giving all hardware design experts and aficionados: worldwide access to their IP functions and open-source ASICs. </br>
@@ -19,7 +22,7 @@ On the first day, we cover the basics of RTL Design, Testbench, Simulation, and 
 
 RTL Design - It consists of an actual verilog code / a set of Verilog codes that have the functionality to meet the required design specifications of the circuit. TestBench - Testbench is a setup that applies a set of stimuli (test-case vector) to check the functional working of the design file.</br>
 
-In the digital circuit design, register-transfer level (RTL) is a design abstraction that models a synchronous digital circuit in terms of the data flow between hardware registers, and the logical operations performed on those signals. RTL abstraction is used in HDL to create high-level circuit representations, from which lower-level representations and ultimately, actual wiring can be derived.</br>
+In the digital circuit design, the register-transfer level (RTL) is a design abstraction that models a synchronous digital circuit regarding the data flow between hardware registers and the logical operations performed on those signals. RTL abstraction is used in HDL to create high-level circuit representations, from which lower-level representations and, ultimately, actual wiring can be derived.</br>
 
 Simulator: It is a tool that is used for checking the design. In this workshop, we are using iverilog tool. Simulation is creating models that mimic the behavior of the device you are designing (simulation models) and creating models to exercise the device (test benches). RTL Design: It consists of an actual verilog code / a set of Verilog codes that have the functionality to meet the required design specifications of the circuit.</br>
 
