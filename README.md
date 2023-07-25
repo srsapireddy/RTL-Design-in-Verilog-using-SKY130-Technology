@@ -319,6 +319,38 @@ The following pictures depict the various versions of combination logic expressi
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/c22e0a20-1847-4fca-8b7a-7851d765f081)
 
+```
+$yosys
+
+yosys> read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib           
+
+yosys> read_verilog opt_check.v                                                     
+
+yosys> synth -top opt_check                                                         
+
+yosys> opt_clean -purge
+
+yosys> abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib                    
+
+yosys> show 
+```
+
+In the above snippet, we see a new code, `opt_clean -purge`, which is used to optimize the design by removing un-used net and components in the design after the design top level is synthesized using `synt -top`</br>
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/e9adc101-9dcd-4fac-9f51-75f9df6ca482)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/5ec46baf-2ffb-44c6-845d-8833ee294d59)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/299034dd-720d-44ab-9c3c-30712b75c07c)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/9f23aebe-93ba-41ef-abf4-462e68a78918)
+
+The above images depict various optimizations done on the expressions simplified by boolean logic optimization.</br>
+
+Similarly, if we use multiple modules in a single code, we use flatten command as used in Flat Synthesis to optimize multiple modules' logic after they are reduced to simple modules using flatten.</br>
+
+Some examples implemented are listed below:</br>
+
 
 
 
