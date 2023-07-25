@@ -347,9 +347,11 @@ In the above snippet, we see a new code, `opt_clean -purge`, which is used to op
 
 The above images depict various optimizations done on the expressions simplified by boolean logic optimization.</br>
 
-Similarly, if we use multiple modules in a single code, we use flatten command as used in Flat Synthesis to optimize multiple modules' logic after they are reduced to simple modules using flatten.</br>
+Similarly, if we use multiple modules in a single code, we use flatten command in Flat Synthesis to optimize multiple modules' logic after they are reduced to simple modules using `flatten`.</br>
 
 Some examples implemented are listed below:</br>
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/e2f5c41a-0ba8-42f1-9343-9b8e23a5ceec)
 
 
 
