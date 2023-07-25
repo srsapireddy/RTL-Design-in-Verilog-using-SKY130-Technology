@@ -353,6 +353,9 @@ Some examples implemented are listed below:</br>
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/e2f5c41a-0ba8-42f1-9343-9b8e23a5ceec)
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/c5206325-d546-47d4-ab8a-0af513782930)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/9aad53a3-67fb-4d22-9439-1e2365a89e9b)
 
 
 
