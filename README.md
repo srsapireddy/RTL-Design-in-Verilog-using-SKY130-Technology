@@ -357,6 +357,13 @@ Some examples implemented are listed below:</br>
 
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/9aad53a3-67fb-4d22-9439-1e2365a89e9b)
 
+#### Netlist
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/98818842-61ad-4357-9748-d46036e6806f)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/0fdc3772-36d7-428e-a3e8-32efdcc60654)
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/52551d1f-e74e-49e8-918b-95035e83e99f)
+
 
 
 
