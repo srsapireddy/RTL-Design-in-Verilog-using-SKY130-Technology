@@ -370,6 +370,21 @@ Some examples implemented are listed below:</br>
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/0fdc3772-36d7-428e-a3e8-32efdcc60654)
 ![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/52551d1f-e74e-49e8-918b-95035e83e99f)
 
+#### Part 2 - Intro to Sequential Logic Optimizations</br>
+
+For Sequential Logic optimization, let us consider the codes below. They are different implementations of D-Flipflop dff with different cases of output assumptions based on the set and reset values.</br>
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/9893fddd-6166-4b50-90ee-7233245bf533)
+
+Now when we try to simulate the Verilog codes of dff_const1 & dff_const2, which are similar except for the output if reset is high, we can see different circuits created due to optimization of sequential logic.</br>
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/a316b57d-a724-4d81-8834-d03167caa3f6)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/6f85c4a4-b2c1-4514-ba8c-3a5f4148e7f6)
+
+In the case of dff_const1, the output q doesn't immediately become high when reset is low. It waits for the next clock edge to assert back to high. Hence, the final net will consist of a D-Flipflop with an active low reset. Since we have coded the RTL as an active high reset, the input to D-FF is an active-high reset through an inverter.</br>
+
+
 
 
 
