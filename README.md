@@ -392,6 +392,11 @@ In case dff_const2, the logic output is q = 1'b1 regardless of the reset conditi
 
 Now, let us see the optimization we obtain for implementing dff_const3.</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/7c07c4dd-6f5c-4835-9492-296e04964f3b)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/1ad807ef-abab-40de-ab94-8c988d9c169c)
+
+Similarly, you can implement the logic of dff_const4 and dff_const5, synthesize the logic, and compare the net and waveforms.</br>
 
 
 
