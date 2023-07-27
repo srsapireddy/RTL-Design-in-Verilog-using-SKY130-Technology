@@ -384,6 +384,15 @@ Now when we try to simulate the Verilog codes of dff_const1 & dff_const2, which 
 
 In the case of dff_const1, the output q doesn't immediately become high when reset is low. It waits for the next clock edge to assert back to high. Hence, the final net will consist of a D-Flipflop with an active low reset. Since we have coded the RTL as an active high reset, the input to D-FF is an active-high reset through an inverter.</br>
 
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/dbe0783c-64d2-4eaa-bb7c-688303251f01)
+
+![image](https://github.com/srsapireddy/RTL-Design-in-Verilog-using-SKY130-Technology/assets/32967087/1aa4bbfa-d394-4e4b-9a06-f1ee1b5c4ec9)
+
+In case dff_const2, the logic output is q = 1'b1 regardless of the reset condition (high/low). Hence, the circuit is optimized to contain the value of q = 1'b1 through a buffer. Here, a D-Flipflop is not synthesized as it is not needed for the logic function of the circuit.</br>
+
+Now, let us see the optimization we obtain for implementing dff_const3.</br>
+
+
 
 
 
